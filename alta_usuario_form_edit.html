@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="img/favicon_w.png" />
+        <title>Personal - Edicion</title>
+        <!-- FIREBASE BIBLIOTECAS -->
+        <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-storage.js"></script>
+        <script src="js/key.js"></script>
+        <!-- Bootstrap core CSS -->
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+        <!-- Additional CSS Files -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet" />
+        <link rel="stylesheet" href="assets/css/fontawesome.css" />
+        <link rel="stylesheet" href="assets/css/tooplate-style.css" />
+        <link rel="stylesheet" href="assets/css/owl.css" />
+        <link rel="stylesheet" href="assets/css/lightbox.css" />
+        <!-- Personal CSS Files -->
+        <script type="module" src="templates/mi-nav.js"></script>
+        <script type="module" src="templates/mi-footer.js"></script>
+        <script type="module" src="templates/mi-progreso.js"></script>
+        
+    </head>
+    <body>
+        <form name="forma">
+            <div id="page-wraper">
+              <!-- Sidebar Menu -->
+                <div class="responsive-nav">
+                  <i class="fa fa-bars" id="menu-toggle"></i>
+                  <div id="menu" class="menu">
+                    <i class="fa fa-times" id="menu-close"></i>
+                    <div class="container">
+                      <div class="image">
+                        <a href="#"><img id="avatar" src="" alt="Avatar"></a>
+                      </div>
+                      <div id="datos_genrales" class="author-content">
+                          <output name="nombre">
+                              <mi-progreso></mi-progreso>
+                          </output>
+                          <output name="email">
+                              <mi-progreso></mi-progreso>
+                          </output>
+                      </div>
+                      <nav class="main-nav" role="navigation">
+                          <mi-nav></mi-nav>  
+                      </nav>
+                      <div class="social-network">
+ 
+                            <div class="white-button">
+                                <button type="button" name="terminarSesión"> Terminar Sesión </button>
+                            </div>
+                      </div>
+
+                      <div class="copyright-text">
+                          <mi-footer></mi-footer>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <section class="section about-me" data-section="section1">
+                    <div class="container">
+                        <div class="section-heading">
+
+                          <h2>Usuarios</h2>
+                          <div class="line-dec">
+                              <br><br>
+                        </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-5 col-sm-5 col-xs-5" >
+                                    <h4>Imagen</h4>
+                                </div>
+                                <div class="col-md-7 col-sm-7 col-xs-7" >
+                                    <input type="file" class="form-control-file" id="foto" name="foto" accept=".png,.jpg,.jpeg,.gif" >
+                                </div>
+                                <div class="col-md-5 col-sm-5 col-xs-5" ></div>
+                                <div class="col-md-7 col-sm-7 col-xs-7" >
+                                    <img name="foto_file" id="foto_file" alt="Falta el Avatar" style="height: 200px; width: auto">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-5 col-sm-5 col-xs-5" >
+                                    <h4>Boleta</h4>
+                                </div>
+                                <div class="col-md-7 col-sm-7 col-xs-7" >
+                                    <input name="matricula" type="text" id="matricula" required="" readonly="">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-5 col-sm-5 col-xs-5" >
+                                    <h4>Nombre Completo</h4>
+                                </div>
+                                <div class="col-md-7 col-sm-7 col-xs-7" >
+                                    <input name="nombre" type="text" id="nombre" required="">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-5 col-sm-5 col-xs-5" >
+                                    <h4>correo</h4>
+                                </div>
+                                <div class="col-md-7 col-sm-7 col-xs-7" >
+                                    <input name="correo" type="email" id="correo" required="" readonly="">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-5 col-sm-5 col-xs-5" >
+                                    <h4>Nivel de acceso</h4>
+                                </div>
+                                <div class="col-md-7 col-sm-7 col-xs-7" >
+                                    <input name="status" type="text" id="status" required="" readonly="">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-5 col-sm-5 col-xs-5" >
+                                    <h4>telefono</h4>
+                                </div>
+                                <div class="col-md-7 col-sm-7 col-xs-7" >
+                                    <input name="telefono" type="text" id="telefono" required="">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-5 col-sm-5 col-xs-5" >
+                                    <h4>Fecha de nacimiento</h4>
+                                </div>
+                                <div class="col-md-7 col-sm-7 col-xs-7" >
+                                  <input name="fecha" type="date" id="fecha" required="">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6 col-xs-6" >
+                                    <button type="submit" id="submit" class="button">Guardar</button>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-6" >
+                                    <button name="eliminar" type="button" class="button"> Eliminar </button>
+                                </div>                          
+                            </div>
+                            </div>
+                    </div>
+                </section>
+            </div>
+        </form>
+        <script type="module" src="js/Controllers/Sesion.js"></script>
+        <script type="module" src="js/Controllers/CtrlAlumno.js"></script>
+    </body>
+</html>
+

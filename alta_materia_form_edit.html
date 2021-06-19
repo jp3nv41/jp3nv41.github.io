@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="img/favicon_w.png" />
+        <title>Personal - Alta</title>
+        <!-- FIREBASE BIBLIOTECAS -->
+        <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-storage.js"></script>
+        <script src="js/key.js"></script>
+        <!-- Bootstrap core CSS -->
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+        <!-- Additional CSS Files -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet" />
+        <link rel="stylesheet" href="assets/css/fontawesome.css" />
+        <link rel="stylesheet" href="assets/css/tooplate-style.css" />
+        <link rel="stylesheet" href="assets/css/owl.css" />
+        <link rel="stylesheet" href="assets/css/lightbox.css" />
+        <!-- Personal CSS Files -->
+        <script type="module" src="templates/mi-nav.js"></script>
+        <script type="module" src="templates/mi-footer.js"></script>
+        <script type="module" src="templates/mi-progreso.js"></script>
+    </head>
+    <body>
+        <form name="forma">
+            <div id="page-wraper">
+              <!-- Sidebar Menu -->
+                <div class="responsive-nav">
+                  <i class="fa fa-bars" id="menu-toggle"></i>
+                  <div id="menu" class="menu">
+                    <i class="fa fa-times" id="menu-close"></i>
+                    <div class="container">
+                      <div class="image">
+                        <a href="#"><img id="avatar" src="" alt="Avatar"></a>
+                      </div>
+                      <div id="datos_genrales" class="author-content">
+                          <output name="nombre">
+                              <mi-progreso></mi-progreso>
+                          </output>
+                          <output name="email">
+                              <mi-progreso></mi-progreso>
+                          </output>
+                      </div>
+                      <nav class="main-nav" role="navigation">
+                          <mi-nav></mi-nav>  
+                      </nav>
+                      <div class="social-network">
+ 
+                            <div class="white-button">
+                                <button type="button" name="terminarSesión"> Terminar Sesión </button>
+                            </div>
+                      </div>
+
+                      <div class="copyright-text">
+                          <mi-footer></mi-footer>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <section class="section about-me" data-section="section1">
+                    <div class="container">
+                        <div class="section-heading">
+                          <h2>Materias</h2>
+                          <div class="line-dec">
+                              <br><br>
+                        </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-5 col-sm-5 col-xs-5" >
+                                    <h4>Profesor</h4>
+                                </div>
+                                <div class="col-md-7 col-sm-7 col-xs-7" >
+                                    <select name="matricula" id="matricula" required="">
+                                        <option value="Sin Profesor">Sin Profesor</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-5 col-sm-5 col-xs-5" >
+                                    <h4>Materia</h4>
+                                </div>
+                                <div class="col-md-7 col-sm-7 col-xs-7" >
+                                    <input name="materia" type="text" id="materia" required="">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-5 col-sm-5 col-xs-5" >
+                                    <h4>Cantidad Horaria</h4>
+                                </div>
+                                <div class="col-md-7 col-sm-7 col-xs-7" >
+                                    <input name="cantidadhrs" type="number" id="nombre" required="">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6 col-xs-6" >
+                                    <button type="submit" id="submit" class="button">Guardar</button>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-6" >
+                                    <button name="eliminar" type="button" class="button"> Eliminar </button>
+                                </div>                          
+                            </div>
+                            </div>
+                    </div>
+                </section>
+            </div>
+        </form>
+    <script type="module" src="js/Controllers/CtrlMateria.js"></script>
+    <script type="module" src="js/Controllers/Sesion.js"></script>
+    </body>
+</html>

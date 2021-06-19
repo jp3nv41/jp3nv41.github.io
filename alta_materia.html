@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="img/favicon_w.png" />
+        <title>Personales</title>
+        <!-- FIREBASE BIBLIOTECAS -->
+        <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-storage.js"></script>
+        <script src="js/key.js"></script>
+        <!-- Bootstrap core CSS -->
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+        <!-- Additional CSS Files -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet" />
+        <link rel="stylesheet" href="assets/css/fontawesome.css" />
+        <link rel="stylesheet" href="assets/css/tooplate-style.css" />
+        <link rel="stylesheet" href="assets/css/owl.css" />
+        <link rel="stylesheet" href="assets/css/lightbox.css" />
+        <!-- Personal CSS Files -->
+        <script type="module" src="templates/mi-nav.js"></script>
+        <script type="module" src="templates/mi-footer.js"></script>
+        <script type="module" src="templates/mi-progreso.js"></script>
+    </head>
+    <body>
+        <form name="forma">
+            <div id="page-wraper">
+              <!-- Sidebar Menu -->
+                <div class="responsive-nav">
+                  <i class="fa fa-bars" id="menu-toggle"></i>
+                  <div id="menu" class="menu">
+                    <i class="fa fa-times" id="menu-close"></i>
+                    <div class="container">
+                      <div class="image">
+                        <a href="#"><img id="avatar" src="" alt="Avatar"></a>
+                      </div>
+                      <div id="datos_genrales" class="author-content">
+                          <output name="nombre">
+                              <mi-progreso></mi-progreso>
+                          </output>
+                          <output name="email">
+                              <mi-progreso></mi-progreso>
+                          </output>
+                      </div>
+                      <nav class="main-nav" role="navigation">
+                          <mi-nav></mi-nav>  
+                      </nav>
+                      <div class="social-network">
+ 
+                            <div class="white-button">
+                                <button type="button" name="terminarSesión"> Terminar Sesión </button>
+                            </div>
+                      </div>
+
+                      <div class="copyright-text">
+                          <mi-footer></mi-footer>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <section class="section about-me" data-section="section1">
+                    <div class="container">
+                        <div class="top-header">
+                                <img src="assets/images/materiassolo.png"/>
+                        </div>
+                        <div class="section-heading">
+                          <h2>Materias</h2>
+                          <div class="line-dec">
+                              <br><br>
+                          </div>
+                        </div>
+                        <div class="right-image-post">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="left-text">
+                                        <div class="white-button">
+                                            <a href="alta_materia_form.html">Agregar Materia Nueva</a>
+                                        </div>  
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="left-text">
+                                        <table class="table">
+                                          <thead class="thead-dark">
+                                              <tr>
+                                                <th>Materia</th>
+                                                <th>Profesor</th>
+                                                <th>Cantidadhrs</th>
+                                                <th>Accion</th>
+                                              </tr>
+                                          </thead>
+                                          <tbody id="lista">
+                                          </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </form>
+    <script type="module" src="js/Controllers/Sesion.js"></script>
+    <script type="module" src="js/Controllers/CtrlMaterias.js"></script>
+    </body>
+</html>

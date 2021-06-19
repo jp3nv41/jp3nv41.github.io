@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="img/favicon_w.png" />
+        <title>Inicio</title>
+        <!-- FIREBASE BIBLIOTECAS -->
+        <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>
+        <script src="js/key.js"></script>
+        <!-- Bootstrap core CSS -->
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+        <!-- Additional CSS Files -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet" />
+        <link rel="stylesheet" href="assets/css/fontawesome.css" />
+        <link rel="stylesheet" href="assets/css/tooplate-style.css" />
+        <link rel="stylesheet" href="assets/css/owl.css" />
+        <link rel="stylesheet" href="assets/css/lightbox.css" />
+        <!-- Personal CSS Files -->
+        <script type="module" src="templates/mi-nav.js"></script>
+        <script type="module" src="templates/mi-footer.js"></script>
+        <script type="module" src="templates/mi-progreso.js"></script>
+    </head>
+    <body>
+        <form name="forma">
+            <div id="page-wraper">
+              <!-- Sidebar Menu -->
+                <div class="responsive-nav">
+                  <i class="fa fa-bars" id="menu-toggle"></i>
+                  <div id="menu" class="menu">
+                    <i class="fa fa-times" id="menu-close"></i>
+                    <div class="container">
+                      <div class="image">
+                        <a href="#"><img id="avatar" src="" alt="Avatar"></a>
+                      </div>
+                      <div id="datos_genrales" class="author-content">
+                          <output name="nombre">
+                              <mi-progreso></mi-progreso>
+                          </output>
+                          <output name="email">
+                              <mi-progreso></mi-progreso>
+                          </output>
+                      </div>
+                      <nav class="main-nav" role="navigation">
+                          <mi-nav></mi-nav>  
+                      </nav>
+                      <div class="social-network">
+                            <div class="white-button">
+                                <button type="button" name="terminarSesión"> Terminar Sesión </button>
+                            </div>
+                      </div>
+
+                      <div class="copyright-text">
+                          <mi-footer></mi-footer>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <section class="section about-me" data-section="section1">
+                    <div class="container">
+                        <div class="top-header">
+                                <img src="assets/images/upiicsa.jpg"  />
+                        </div>
+                        <div class="section-heading">
+                            <h2>INICIO</h2>
+                          <div class="line-dec"></div>
+                          <span>Dominguez Sanchez Jose Ignacio</span><br><span> Secuencia: 3NV41 </span><br><span>Boleta: 2014130331</span>
+                        </div>
+                        <div class="right-image-post">
+                            <div class="row">
+
+                              <div class="col-md-8">
+                                <div class="left-text">
+                                  <h4>Objetivo</h4>
+                                  <p>Nuestro objetivo al trabajar en este Proyecto ,es facilitar al
+                                    usuario que tenga sus manos este programa, brindarle una
+                                    herramienta, con la cual no solo sea facil poder trabajar y
+                                    tener un respectivo control con todos los datos de los
+                                    alumnus, si no que ademas pueda ahorrarse tiempo y
+                                    trabajar de forma facil y eficaz.</p>
+                                </div>
+                              </div>
+                              <div class="col-md-4">
+                                <div class="right-image">
+                                  <img src="assets/images/objetivo.jpg" />
+                                </div>
+                              </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </form>
+    <script type="module" src="js/Controllers/Sesion.js"></script>
+    </body>
+</html>
